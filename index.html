@@ -12,13 +12,24 @@
             height: 100%;
             margin: 0;
             padding: 0;
+            background: #fff;
+            align-items: center;
+            justify-content: center;
+            display: flex;
         }
-        body{
-            background: #fff url('logo.png') 50% 50% no-repeat;
-            background-size: contain;
+        #logo{
+            min-height: 90%;
+            max-height: 90%;
+            max-width: 90%;
         }
     </style>
 </head>
 <body>
+    <img id="logo" src="logo.png" alt="Code for Duisburg" />
+    <script>
+        if(!!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect){
+            document.getElementById('logo').src = 'logo.svg';
+        }
+    </script>
 </body>
 </html>
